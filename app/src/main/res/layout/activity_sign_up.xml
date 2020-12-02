@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_background"
+    android:padding="16dp"
+    tools:context=".SignUp">
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/register_form_background"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392">
+
+
+        <EditText
+            android:id="@+id/etUsernameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/signup_form_background"
+            android:ems="10"
+            android:padding="10dp"
+            android:hint="Username"
+            android:drawableRight="@drawable/icons8_male_user_20px_black"
+            android:textColorHint="#7F9191"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etEmailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/signup_form_background"
+            android:ems="10"
+            android:padding="10dp"
+            android:hint="Your Email"
+            android:drawableRight="@drawable/icons8_mail_20px_black"
+            android:textColorHint="#7F9191"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/signup_form_background"
+            android:ems="10"
+            android:padding="10dp"
+            android:hint="Your Password"
+            android:textColorHint="#7F9191"
+            android:drawableRight="@drawable/icons8_key_20px_black"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etConfirmPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/signup_form_background"
+            android:ems="10"
+            android:padding="10dp"
+            android:hint="Confirm Your Password"
+            android:textColorHint="#7F9191"
+            android:layout_marginBottom="80dp"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:background="@drawable/signin_background"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
