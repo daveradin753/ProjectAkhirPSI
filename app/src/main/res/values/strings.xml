@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProjectAkhirPSI</string>
+    <string name="bubur">Bubur</string>
+    <string name="soto">Soto</string>
+    <string name="kopi">Kopi</string>
+    <string name="bakso">Bakso</string>
 </resources>
