@@ -1,0 +1,233 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.projectakhirpsi\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\"\r\n        android:fullBackupContent=\"@xml/backup_descriptor\">\r\n        <activity android:name=\".HomePageActivity\"></activity>\r\n        <activity android:name=\".SignUpActivity\" />\r\n        <activity android:name=\".LoginActivity\"\r\n            android:theme=\"@style/LoginPage\"\r\n            android:windowSoftInputMode=\"adjustResize\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision e5b7198a10a28e04b986a12b5f1ed59db6212b35)
++++ app/src/main/AndroidManifest.xml	(date 1607169511978)
+@@ -4,15 +4,16 @@
+ 
+     <application
+         android:allowBackup="true"
++        android:fullBackupContent="@xml/backup_descriptor"
+         android:icon="@mipmap/ic_launcher"
+         android:label="@string/app_name"
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+-        android:theme="@style/AppTheme"
+-        android:fullBackupContent="@xml/backup_descriptor">
+-        <activity android:name=".HomePageActivity"></activity>
++        android:theme="@style/AppTheme">
++        <activity android:name=".HomePageActivity" />
+         <activity android:name=".SignUpActivity" />
+-        <activity android:name=".LoginActivity"
++        <activity
++            android:name=".LoginActivity"
+             android:theme="@style/LoginPage"
+             android:windowSoftInputMode="adjustResize">
+             <intent-filter>
+Index: app/src/main/res/layout/activity_home_page.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/colorBackgroundPrimary\"\r\n    tools:context=\".HomePageActivity\">\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/linearLayout2\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"@color/colorTopBar\"\r\n        android:orientation=\"horizontal\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/ib_logoIcon\"\r\n            android:layout_width=\"200dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:background=\"@color/colorTopBar\"\r\n            app:srcCompat=\"@android:drawable/btn_star_big_on\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/ib_searchIcon\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:background=\"@color/colorTopBar\"\r\n            app:srcCompat=\"@android:drawable/ic_menu_search\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/ib_profileIcon\"\r\n            android:layout_width=\"8dp\"\r\n            android:layout_height=\"52dp\"\r\n            android:layout_weight=\"1\"\r\n            android:background=\"@color/colorTopBar\"\r\n            app:srcCompat=\"@drawable/icons8_male_user_20px_black\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <ImageView\r\n        android:id=\"@+id/iv_kiriAtas\"\r\n        android:layout_width=\"120dp\"\r\n        android:layout_height=\"230dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:adjustViewBounds=\"true\"\r\n        android:scaleType=\"fitXY\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/iv_kiriBawah\"\r\n        app:layout_constraintEnd_toStartOf=\"@+id/iv_kananAtas\"\r\n        app:layout_constraintHorizontal_bias=\"0.5\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/linearLayout2\"\r\n        app:layout_constraintVertical_bias=\"0.0\"\r\n        tools:srcCompat=\"@drawable/bubur\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tv_bubur\"\r\n        android:layout_width=\"65dp\"\r\n        android:layout_height=\"41dp\"\r\n        android:layout_alignStart=\"@+id/iv_kiriAtas\"\r\n        android:layout_alignTop=\"@+id/iv_kiriAtas\"\r\n        android:layout_alignEnd=\"@+id/iv_kiriAtas\"\r\n        android:layout_alignBottom=\"@+id/iv_kiriAtas\"\r\n        android:layout_margin=\"1dp\"\r\n        android:layout_marginStart=\"32dp\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"24sp\"\r\n        android:textStyle=\"bold\"\r\n        android:text=\"@string/bubur\"\r\n        android:textColor=\"#000000\"\r\n        android:background=\"@color/colorPrimary\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/iv_kiriAtas\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/iv_kiriAtas\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/iv_kananAtas\"\r\n        android:layout_width=\"180dp\"\r\n        android:layout_height=\"230dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/iv_kananBawah\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.5\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/iv_kiriAtas\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/linearLayout2\"\r\n        app:layout_constraintVertical_bias=\"0.0\"\r\n        android:scaleType=\"fitXY\"\r\n        tools:srcCompat=\"@drawable/soto\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tv_soto\"\r\n        android:layout_width=\"65dp\"\r\n        android:layout_height=\"41dp\"\r\n        android:layout_alignStart=\"@+id/iv_kananAtas\"\r\n        android:layout_alignTop=\"@+id/iv_kananAtas\"\r\n        android:layout_alignEnd=\"@+id/iv_kananAtas\"\r\n        android:layout_alignBottom=\"@+id/iv_kananAtas\"\r\n        android:layout_margin=\"1dp\"\r\n        android:layout_marginStart=\"32dp\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"24sp\"\r\n        android:textStyle=\"bold\"\r\n        android:text=\"@string/soto\"\r\n        android:textColor=\"#000000\"\r\n        android:background=\"@color/colorPrimary\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/iv_kananAtas\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/iv_kananAtas\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/iv_kiriBawah\"\r\n        android:layout_width=\"180dp\"\r\n        android:layout_height=\"230dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:scaleType=\"fitXY\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/constraintLayout\"\r\n        app:layout_constraintEnd_toStartOf=\"@+id/iv_kananBawah\"\r\n        app:layout_constraintHorizontal_bias=\"0.5\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/iv_kiriAtas\"\r\n        tools:srcCompat=\"@drawable/kopi\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tv_kopi\"\r\n        android:layout_width=\"65dp\"\r\n        android:layout_height=\"41dp\"\r\n        android:layout_alignStart=\"@+id/iv_kiriBawah\"\r\n        android:layout_alignTop=\"@+id/iv_kiriBawah\"\r\n        android:layout_alignEnd=\"@+id/iv_kiriBawah\"\r\n        android:layout_alignBottom=\"@+id/iv_kiriBawah\"\r\n        android:layout_margin=\"1dp\"\r\n        android:layout_marginStart=\"32dp\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"24sp\"\r\n        android:textStyle=\"bold\"\r\n        android:text=\"@string/kopi\"\r\n        android:textColor=\"#000000\"\r\n        android:background=\"@color/colorPrimary\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/iv_kiriBawah\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/iv_kiriBawah\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/iv_kananBawah\"\r\n        android:layout_width=\"120dp\"\r\n        android:layout_height=\"230dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:scaleType=\"fitXY\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/constraintLayout\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.5\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/iv_kiriBawah\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/iv_kananAtas\"\r\n        tools:srcCompat=\"@drawable/bakso\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tv_bakso\"\r\n        android:layout_width=\"65dp\"\r\n        android:layout_height=\"41dp\"\r\n        android:layout_alignStart=\"@+id/iv_kananBawah\"\r\n        android:layout_alignTop=\"@+id/iv_kananBawah\"\r\n        android:layout_alignEnd=\"@+id/iv_kananBawah\"\r\n        android:layout_alignBottom=\"@+id/iv_kananBawah\"\r\n        android:layout_margin=\"1dp\"\r\n        android:layout_marginStart=\"32dp\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"24sp\"\r\n        android:textStyle=\"bold\"\r\n        android:text=\"@string/bakso\"\r\n        android:textColor=\"#000000\"\r\n        android:background=\"@color/colorPrimary\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/iv_kananBawah\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/iv_kananBawah\" />\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:id=\"@+id/constraintLayout\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"50dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        android:background=\"@color/colorPrimary\">\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton6\"\r\n            android:layout_width=\"50dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@color/colorPrimary\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\"\r\n            app:srcCompat=\"@android:drawable/ic_menu_save\" />\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_home_page.xml	(revision e5b7198a10a28e04b986a12b5f1ed59db6212b35)
++++ app/src/main/res/layout/activity_home_page.xml	(date 1607169477161)
+@@ -43,137 +43,6 @@
+ 
+     </LinearLayout>
+ 
+-    <ImageView
+-        android:id="@+id/iv_kiriAtas"
+-        android:layout_width="120dp"
+-        android:layout_height="230dp"
+-        android:layout_marginStart="16dp"
+-        android:adjustViewBounds="true"
+-        android:scaleType="fitXY"
+-        app:layout_constraintBottom_toTopOf="@+id/iv_kiriBawah"
+-        app:layout_constraintEnd_toStartOf="@+id/iv_kananAtas"
+-        app:layout_constraintHorizontal_bias="0.5"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+-        app:layout_constraintVertical_bias="0.0"
+-        tools:srcCompat="@drawable/bubur" />
+-
+-    <TextView
+-        android:id="@+id/tv_bubur"
+-        android:layout_width="65dp"
+-        android:layout_height="41dp"
+-        android:layout_alignStart="@+id/iv_kiriAtas"
+-        android:layout_alignTop="@+id/iv_kiriAtas"
+-        android:layout_alignEnd="@+id/iv_kiriAtas"
+-        android:layout_alignBottom="@+id/iv_kiriAtas"
+-        android:layout_margin="1dp"
+-        android:layout_marginStart="32dp"
+-        android:gravity="center"
+-        android:textSize="24sp"
+-        android:textStyle="bold"
+-        android:text="@string/bubur"
+-        android:textColor="#000000"
+-        android:background="@color/colorPrimary"
+-        app:layout_constraintStart_toStartOf="@+id/iv_kiriAtas"
+-        app:layout_constraintTop_toTopOf="@+id/iv_kiriAtas" />
+-
+-    <ImageView
+-        android:id="@+id/iv_kananAtas"
+-        android:layout_width="180dp"
+-        android:layout_height="230dp"
+-        android:layout_marginEnd="16dp"
+-        app:layout_constraintBottom_toTopOf="@+id/iv_kananBawah"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.5"
+-        app:layout_constraintStart_toEndOf="@+id/iv_kiriAtas"
+-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+-        app:layout_constraintVertical_bias="0.0"
+-        android:scaleType="fitXY"
+-        tools:srcCompat="@drawable/soto" />
+-
+-    <TextView
+-        android:id="@+id/tv_soto"
+-        android:layout_width="65dp"
+-        android:layout_height="41dp"
+-        android:layout_alignStart="@+id/iv_kananAtas"
+-        android:layout_alignTop="@+id/iv_kananAtas"
+-        android:layout_alignEnd="@+id/iv_kananAtas"
+-        android:layout_alignBottom="@+id/iv_kananAtas"
+-        android:layout_margin="1dp"
+-        android:layout_marginStart="32dp"
+-        android:gravity="center"
+-        android:textSize="24sp"
+-        android:textStyle="bold"
+-        android:text="@string/soto"
+-        android:textColor="#000000"
+-        android:background="@color/colorPrimary"
+-        app:layout_constraintStart_toStartOf="@+id/iv_kananAtas"
+-        app:layout_constraintTop_toTopOf="@+id/iv_kananAtas" />
+-
+-    <ImageView
+-        android:id="@+id/iv_kiriBawah"
+-        android:layout_width="180dp"
+-        android:layout_height="230dp"
+-        android:layout_marginStart="16dp"
+-        android:scaleType="fitXY"
+-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+-        app:layout_constraintEnd_toStartOf="@+id/iv_kananBawah"
+-        app:layout_constraintHorizontal_bias="0.5"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/iv_kiriAtas"
+-        tools:srcCompat="@drawable/kopi" />
+-
+-    <TextView
+-        android:id="@+id/tv_kopi"
+-        android:layout_width="65dp"
+-        android:layout_height="41dp"
+-        android:layout_alignStart="@+id/iv_kiriBawah"
+-        android:layout_alignTop="@+id/iv_kiriBawah"
+-        android:layout_alignEnd="@+id/iv_kiriBawah"
+-        android:layout_alignBottom="@+id/iv_kiriBawah"
+-        android:layout_margin="1dp"
+-        android:layout_marginStart="32dp"
+-        android:gravity="center"
+-        android:textSize="24sp"
+-        android:textStyle="bold"
+-        android:text="@string/kopi"
+-        android:textColor="#000000"
+-        android:background="@color/colorPrimary"
+-        app:layout_constraintStart_toStartOf="@+id/iv_kiriBawah"
+-        app:layout_constraintTop_toTopOf="@+id/iv_kiriBawah" />
+-
+-    <ImageView
+-        android:id="@+id/iv_kananBawah"
+-        android:layout_width="120dp"
+-        android:layout_height="230dp"
+-        android:layout_marginEnd="16dp"
+-        android:scaleType="fitXY"
+-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.5"
+-        app:layout_constraintStart_toEndOf="@+id/iv_kiriBawah"
+-        app:layout_constraintTop_toBottomOf="@+id/iv_kananAtas"
+-        tools:srcCompat="@drawable/bakso" />
+-
+-    <TextView
+-        android:id="@+id/tv_bakso"
+-        android:layout_width="65dp"
+-        android:layout_height="41dp"
+-        android:layout_alignStart="@+id/iv_kananBawah"
+-        android:layout_alignTop="@+id/iv_kananBawah"
+-        android:layout_alignEnd="@+id/iv_kananBawah"
+-        android:layout_alignBottom="@+id/iv_kananBawah"
+-        android:layout_margin="1dp"
+-        android:layout_marginStart="32dp"
+-        android:gravity="center"
+-        android:textSize="24sp"
+-        android:textStyle="bold"
+-        android:text="@string/bakso"
+-        android:textColor="#000000"
+-        android:background="@color/colorPrimary"
+-        app:layout_constraintStart_toStartOf="@+id/iv_kananBawah"
+-        app:layout_constraintTop_toTopOf="@+id/iv_kananBawah" />
+-
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/constraintLayout"
+         android:layout_width="0dp"
+@@ -195,5 +64,16 @@
+             app:srcCompat="@android:drawable/ic_menu_save" />
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ 
++    <Button
++        android:id="@+id/button"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Button"
++        android:onClick="logOut"
++        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
++
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/projectakhirpsi/HomePageActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.projectakhirpsi\r\n\r\nimport android.content.Intent\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.view.View\r\nimport com.google.firebase.auth.FirebaseAuth\r\n\r\nclass HomePageActivity : AppCompatActivity() {\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_home_page)\r\n    }\r\n    fun logOut(view: View){\r\n        FirebaseAuth.getInstance().signOut()\r\n        intent = Intent(this, LoginActivity::class.java)\r\n        startActivity(intent)\r\n        finish()\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/projectakhirpsi/HomePageActivity.kt	(revision e5b7198a10a28e04b986a12b5f1ed59db6212b35)
++++ app/src/main/java/com/example/projectakhirpsi/HomePageActivity.kt	(date 1607169432415)
+@@ -3,6 +3,7 @@
+ import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
++import android.util.Log
+ import android.view.View
+ import com.google.firebase.auth.FirebaseAuth
+ 
+@@ -10,6 +11,20 @@
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(R.layout.activity_home_page)
++//        val docReference = fstore.collection("users").document(userID)
++//        docReference.get()
++//            .addOnSuccessListener { document ->
++//                if (document != null){
++//                    Log.d("Ada file", "DocumentSnapshot data: ${document.data}")
++//                    tvName.text = document.getString("fullname")
++//                    tvEmail.text = document.getString("email")
++//                }else {
++//                    Log.d("Tidak ada file", "Tidak ditemukan document tersebut")
++//                }
++//            }
++//            .addOnFailureListener { exception ->
++//                Log.d("errordb", "Error: ", exception)
++//            }
+     }
+     fun logOut(view: View){
+         FirebaseAuth.getInstance().signOut()

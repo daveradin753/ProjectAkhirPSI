@@ -43,137 +43,6 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/iv_kiriAtas"
-        android:layout_width="120dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="16dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/iv_kiriBawah"
-        app:layout_constraintEnd_toStartOf="@+id/iv_kananAtas"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/bubur" />
-
-    <TextView
-        android:id="@+id/tv_bubur"
-        android:layout_width="65dp"
-        android:layout_height="41dp"
-        android:layout_alignStart="@+id/iv_kiriAtas"
-        android:layout_alignTop="@+id/iv_kiriAtas"
-        android:layout_alignEnd="@+id/iv_kiriAtas"
-        android:layout_alignBottom="@+id/iv_kiriAtas"
-        android:layout_margin="1dp"
-        android:layout_marginStart="32dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/bubur"
-        android:textColor="#000000"
-        android:background="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="@+id/iv_kiriAtas"
-        app:layout_constraintTop_toTopOf="@+id/iv_kiriAtas" />
-
-    <ImageView
-        android:id="@+id/iv_kananAtas"
-        android:layout_width="180dp"
-        android:layout_height="230dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/iv_kananBawah"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv_kiriAtas"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.0"
-        android:scaleType="fitXY"
-        tools:srcCompat="@drawable/soto" />
-
-    <TextView
-        android:id="@+id/tv_soto"
-        android:layout_width="65dp"
-        android:layout_height="41dp"
-        android:layout_alignStart="@+id/iv_kananAtas"
-        android:layout_alignTop="@+id/iv_kananAtas"
-        android:layout_alignEnd="@+id/iv_kananAtas"
-        android:layout_alignBottom="@+id/iv_kananAtas"
-        android:layout_margin="1dp"
-        android:layout_marginStart="32dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/soto"
-        android:textColor="#000000"
-        android:background="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="@+id/iv_kananAtas"
-        app:layout_constraintTop_toTopOf="@+id/iv_kananAtas" />
-
-    <ImageView
-        android:id="@+id/iv_kiriBawah"
-        android:layout_width="180dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="16dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toStartOf="@+id/iv_kananBawah"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_kiriAtas"
-        tools:srcCompat="@drawable/kopi" />
-
-    <TextView
-        android:id="@+id/tv_kopi"
-        android:layout_width="65dp"
-        android:layout_height="41dp"
-        android:layout_alignStart="@+id/iv_kiriBawah"
-        android:layout_alignTop="@+id/iv_kiriBawah"
-        android:layout_alignEnd="@+id/iv_kiriBawah"
-        android:layout_alignBottom="@+id/iv_kiriBawah"
-        android:layout_margin="1dp"
-        android:layout_marginStart="32dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/kopi"
-        android:textColor="#000000"
-        android:background="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="@+id/iv_kiriBawah"
-        app:layout_constraintTop_toTopOf="@+id/iv_kiriBawah" />
-
-    <ImageView
-        android:id="@+id/iv_kananBawah"
-        android:layout_width="120dp"
-        android:layout_height="230dp"
-        android:layout_marginEnd="16dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv_kiriBawah"
-        app:layout_constraintTop_toBottomOf="@+id/iv_kananAtas"
-        tools:srcCompat="@drawable/bakso" />
-
-    <TextView
-        android:id="@+id/tv_bakso"
-        android:layout_width="65dp"
-        android:layout_height="41dp"
-        android:layout_alignStart="@+id/iv_kananBawah"
-        android:layout_alignTop="@+id/iv_kananBawah"
-        android:layout_alignEnd="@+id/iv_kananBawah"
-        android:layout_alignBottom="@+id/iv_kananBawah"
-        android:layout_margin="1dp"
-        android:layout_marginStart="32dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/bakso"
-        android:textColor="#000000"
-        android:background="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="@+id/iv_kananBawah"
-        app:layout_constraintTop_toTopOf="@+id/iv_kananBawah" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
@@ -194,6 +63,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_save" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:onClick="logOut"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
