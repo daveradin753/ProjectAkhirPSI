@@ -37,19 +37,18 @@ class SignUpActivity : AppCompatActivity() {
         etPasswordConfirm = findViewById(R.id.etConfirmPasswordRegister)
         btnSignup = findViewById(R.id.btn_Signup)
 
+        val email: String = etEmail.text.toString().trim()
+        val password: String = etPassword.text.toString().trim()
+        val passwordConfirm: String = etPasswordConfirm.text.toString().trim()
+        val fullname = etFullName.text.toString()
+        val users: MutableMap<Any, Any> = HashMap()
+        fstore = FirebaseFirestore.getInstance()
 
         fauth = Firebase.auth
         progressBar = findViewById(R.id.progressBarSignup)
 
         btnSignup.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
-
-                val email: String = etEmail.text.toString().trim()
-                val password: String = etPassword.text.toString().trim()
-                val passwordConfirm: String = etPasswordConfirm.text.toString().trim()
-                val fullname = etFullName.text.toString()
-                val users: MutableMap<String, Any> = HashMap()
-                fstore = FirebaseFirestore.getInstance()
 
                 //menampilkan error
                 if (TextUtils.isEmpty(email)) {
@@ -74,14 +73,9 @@ class SignUpActivity : AppCompatActivity() {
                 fauth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
                         progressBar.visibility = View.INVISIBLE
                         if (task.isSuccessful) {
-//                            Toast.makeText(this@SignUpActivity, "User Created", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@SignUpActivity, "User Created", Toast.LENGTH_SHORT).show()
                             users["fullname"] = fullname
                             users["email"] = email
-                            fstore.collection("users").add(users).addOnSuccessListener {
-                                Toast.makeText(this@SignUpActivity, "Record added", Toast.LENGTH_LONG).show()
-                            }.addOnFailureListener {
-                                Toast.makeText(this@SignUpActivity, "Record failed", Toast.LENGTH_LONG).show()
-                            }
                             intent = Intent(this@SignUpActivity, HomePageActivity::class.java)
                             startActivity(intent)
                         } else {
