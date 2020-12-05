@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -11,6 +12,8 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -26,6 +29,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var fauth: FirebaseAuth
     private lateinit var fstore: FirebaseFirestore
     private lateinit var progressBar: ProgressBar
+    private lateinit var userID: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,13 +78,14 @@ class SignUpActivity : AppCompatActivity() {
                 fauth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
                         progressBar.visibility = View.INVISIBLE
                         if (task.isSuccessful) {
-//                            Toast.makeText(this@SignUpActivity, "User Created", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@SignUpActivity, "User Created", Toast.LENGTH_SHORT).show()
                             users["fullname"] = fullname
                             users["email"] = email
+                            userID = fauth.currentUser?.uid ?: ""
                             fstore.collection("users").add(users).addOnSuccessListener {
-                                Toast.makeText(this@SignUpActivity, "Record added", Toast.LENGTH_LONG).show()
+                                Log.d("SignUp", "Success: user profile is created for $userID")
                             }.addOnFailureListener {
-                                Toast.makeText(this@SignUpActivity, "Record failed", Toast.LENGTH_LONG).show()
+                                Log.d("SignUp", "Error! ")
                             }
                             intent = Intent(this@SignUpActivity, HomePageActivity::class.java)
                             startActivity(intent)
