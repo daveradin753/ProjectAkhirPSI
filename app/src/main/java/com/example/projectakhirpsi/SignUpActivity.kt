@@ -74,6 +74,8 @@ class SignUpActivity : AppCompatActivity() {
                         progressBar.visibility = View.INVISIBLE
                         if (task.isSuccessful) {
                             Toast.makeText(this@SignUpActivity, "User Created", Toast.LENGTH_SHORT).show()
+                            users["fullname"] = fullname
+                            users["email"] = email
                             intent = Intent(this@SignUpActivity, HomePageActivity::class.java)
                             startActivity(intent)
                         } else {
