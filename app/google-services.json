@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613262783229",
+    "project_id": "project-psi-ebbac",
+    "storage_bucket": "project-psi-ebbac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613262783229:android:406677e55c7c29d7f38494",
+        "android_client_info": {
+          "package_name": "com.example.projectakhirpsi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613262783229-ro2pkcn2ehupc4fkmprufu4lds8mecss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFy3w0BgsAYB018zrAvchhfZmzKiDFzE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613262783229-ro2pkcn2ehupc4fkmprufu4lds8mecss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
