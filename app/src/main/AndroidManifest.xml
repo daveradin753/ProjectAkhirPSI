@@ -10,10 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".HomePage"></activity>
-        <activity android:name=".SignUp" />
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LoginActivity"
             android:theme="@style/LoginPage"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
